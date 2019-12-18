@@ -20,7 +20,7 @@
             }
 
             async function loadBrands() {
-                let brands = await getApi('http://localhost:3001/v1/brands');
+                let brands = await getApi('http://167.86.121.233:88/v1/brands');
                 let selectBrand = document.getElementById('brands');
                 populate(brands, selectBrand);
             }
@@ -37,7 +37,7 @@
             }
 
             async function loadCars(brand) {
-                let cars = await getApi('http://localhost:3001/v1/cars/' + brand);
+                let cars = await getApi('http://167.86.121.233:88/v1/cars/' + brand);
                 let selectDiv = document.getElementById('selectors');
                 let selectCar = document.createElement("select");
                 selectCar.id = 'car';
@@ -60,7 +60,7 @@
             }
 
             async function rentCar(id) {
-                fetch('http://localhost:3001/v1/rent/' + id, {
+                fetch('http://167.86.121.233:88/v1/rent/' + id, {
                     method: "GET",                    
                     headers:{
                         'Content-Type': 'application/json'
